@@ -1,0 +1,21 @@
+{% extends 'index.html' %}
+
+{% block content %}
+    <!-- <h1>This is Menu 1</h1>
+    <button type="button" class="btn btn-primary" onclick="callFunction('click_1')">Click 1</button>
+    <label id="messageLabel" class="mt-3"></label>
+    <script src="{{ url_for('static', filename='js/menu1.js') }}"></script> -->
+
+    <h2>This is the content of Menu1!</h2>
+    <br/>
+    <div class="row d-flex align-items-center">
+        <div class="col-md-1">
+            <button type="button" class="btn btn-primary btn-block" onclick="callFunction('click_1')">Click Me</button>
+        </div>
+        <div class="col-md-1">
+            <label id="messageLabel"></label>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/menu1.js') }}"></script>
+{% endblock %}

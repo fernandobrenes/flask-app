@@ -1,0 +1,28 @@
+function clickMe() {
+    // Make an AJAX request to call the first function
+    fetch('/call_function')
+        .then(response => response.json())
+        .then(data => {
+            updateMessage(data.message);
+        })
+        .catch(error => {
+            console.error('Error calling function:', error);
+        });
+}
+
+function clickOnce() {
+    // Make an AJAX request to call the second function
+    fetch('/call_excellent_function')
+        .then(response => response.json())
+        .then(data => {
+            updateMessage(data.message);
+        })
+        .catch(error => {
+            console.error('Error calling function:', error);
+        });
+}
+
+function updateMessage(message) {
+    // Update the content of the label with the provided message
+    document.getElementById('messageLabel').innerHTML = message;
+}
