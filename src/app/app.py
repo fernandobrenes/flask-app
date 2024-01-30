@@ -2,6 +2,7 @@ from flask import Flask, render_template, jsonify
 from functions import my_functions
 from ajax_routes import ajax_blueprint  # Import the Blueprint
 
+
 app = Flask(__name__)
 
 # Main route ("/")
